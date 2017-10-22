@@ -1,4 +1,4 @@
-version: '2'
+version: '3'
 services:
   web:
     container_name: web
@@ -20,7 +20,7 @@ services:
     volumes:
       - './docker/percona/sql:/var/lib/mysql'
     ports:
-      - '3307:3306'
+      - '3306:3306'
     restart: always
 
   phpmyadmin:
@@ -28,7 +28,7 @@ services:
         container_name: phpmyadmin
         environment:
           - PMA_ARBITRARY=1
-          - PMA_HOST=127.0.0.1
+          - PMA_HOST=172.18.0.1
           - PMA_PORT=3306
         restart: always
         ports:
