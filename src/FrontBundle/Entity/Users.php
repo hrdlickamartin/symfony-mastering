@@ -1,16 +1,16 @@
 <?php
 
-namespace AppBundle\Entity;
+namespace FrontBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * User
+ * Users
  *
  * @ORM\Table(name="user")
- * @ORM\Entity(repositoryClass="AppBundle\Repository\UserRepository")
+ * @ORM\Entity(repositoryClass="FrontBundle\Repository\UsersRepository")
  */
-class User
+class Users
 {
     /**
      * @var int
@@ -51,7 +51,7 @@ class User
      *
      * @param string $name
      *
-     * @return User
+     * @return Users
      */
     public function setName($name)
     {
@@ -75,7 +75,7 @@ class User
      *
      * @param string $age
      *
-     * @return User
+     * @return Users
      */
     public function setAge($age)
     {
